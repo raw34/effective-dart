@@ -24,45 +24,45 @@
     - [考虑] [可以在同一个库里声明多个类](#2-2)
 - 类
     - [避免] [避免为了使用一个简单的函数而去定义一个单一成员的抽象类](#3-1)
-    - [避免] [定义仅包含静态成员的类。](#3-1)
-    - [避免] [集成一个不期望被集成的类。](#3-1)
-    - [要] [把能够继承的说明添加到文档中，如果这个类可以继承。](#3-1)
-    - [避免] [去实现一个不期望成为接口的类（该类不想作为接口被实现）。](#3-1)
-    - [要] [对支持接口的类在文档注明](#3-1)
-    - [要] [对支持 `mixin` 的类在文档注明](#3-1)
-    - [避免] [去 `mixin` 一个不期望被 `mixin` 的类](#3-1)
+    - [避免] [定义仅包含静态成员的类。](#3-2)
+    - [避免] [集成一个不期望被集成的类。](#3-3)
+    - [要] [把能够继承的说明添加到文档中，如果这个类可以继承。](#3-4)
+    - [避免] [去实现一个不期望成为接口的类（该类不想作为接口被实现）。](#3-5)
+    - [要] [对支持接口的类在文档注明](#3-6)
+    - [要] [对支持 `mixin` 的类在文档注明](#3-7)
+    - [避免] [去 `mixin` 一个不期望被 `mixin` 的类](#3-8)
 
 - 构造函数
-    - [考虑] [如果类支持请将构造函数声明为`const`](#4-2)
+    - [考虑] [如果类支持请将构造函数声明为`const`](#4-1)
 - 成员
     - [推荐] [指定字段或顶级变量为 `final`。](#5-1)
-    - [要] [对概念上是访问的属性使用 `getter` 方法。](#5-1)
-    - [要] [对概念上是修改的属性使用 `setter` 方法。](#5-1)
-    - [不要] [在没有对应的 `getter` 的情况下定义 `setter`。](#5-1)
-    - [AVOID] [using runtime type tests to fake overloading.](#5-1)
-    - [AVOID] [public late final fields without initializers.](#5-1)
-    - [AVOID] [returning nullable Future, Stream, and collection types.](#5-1)
-    - [避免] [为了书写流畅，而从方法中返回 `this` 。](#5-1)
+    - [要] [对概念上是访问的属性使用 `getter` 方法。](#5-2)
+    - [要] [对概念上是修改的属性使用 `setter` 方法。](#5-3)
+    - [不要] [在没有对应的 `getter` 的情况下定义 `setter`。](#5-4)
+    - [AVOID] [using runtime type tests to fake overloading.](#5-5)
+    - [AVOID] [public late final fields without initializers.](#5-6)
+    - [AVOID] [returning nullable Future, Stream, and collection types.](#5-7)
+    - [避免] [为了书写流畅，而从方法中返回 `this` 。](#5-8)
 - 类型
     - [DO] [type annotate variables without initializers.](#6-1)
-    - [推荐] [为类型不明显的公共字段和公共顶级变量指定类型注解。](#6-1)
-    - [避免] [为初始化的局部变量添加冗余地类型注解。](#6-1)
-    - [DO] [annotate return types on function declarations.](#6-1)
-    - [DO] [annotate parameter types on function declarations.](#6-1)
-    - [避免] [在函数表达式上注解推断的参数类型。](#6-1)
-    - [DON’T] [type annotate initializing formals.](#6-1)
-    - [DO] [write type arguments on generic invocations that aren’t inferred.](#6-1)
-    - [DON’T] [write type arguments on generic invocations that are inferred.](#6-1)
-    - [AVOID] [writing incomplete generic types.](#6-1)
-    - [推荐] [使用 `dynamic` 注解替换推断失败的情况。](#6-1)
-    - [推荐] [使 `function` 类型注解的特征更明显](#6-1)
-    - [不要] [为 `setter` 方法指定返回类型。](#6-1)
-    - [不要] [使用弃用的 `typedef` 语法。](#6-1)
-    - [推荐] [优先使用内联函数类型，而后是 `typedef`。](#6-1)
-    - [考虑] [在参数上使用函数类型语法。](#6-1)
-    - [避免] [使用 `dynamic` 除非你希望禁用静态检查](#6-1)
-    - [要] [使用 `Future<void>` 作为无法回值异步成员的返回类型。](#6-1)
-    - [避免] [使用 `FutureOr<T>` 作为返回类型。](#6-1)
+    - [推荐] [为类型不明显的公共字段和公共顶级变量指定类型注解。](#6-2)
+    - [避免] [为初始化的局部变量添加冗余地类型注解。](#6-3)
+    - [DO] [annotate return types on function declarations.](#6-4)
+    - [DO] [annotate parameter types on function declarations.](#6-5)
+    - [避免] [在函数表达式上注解推断的参数类型。](#6-6)
+    - [DON’T] [type annotate initializing formals.](#6-7)
+    - [DO] [write type arguments on generic invocations that aren’t inferred.](#6-8)
+    - [DON’T] [write type arguments on generic invocations that are inferred.](#6-9)
+    - [AVOID] [writing incomplete generic types.](#6-10)
+    - [推荐] [使用 `dynamic` 注解替换推断失败的情况。](#6-11)
+    - [推荐] [使 `function` 类型注解的特征更明显](#6-12)
+    - [不要] [为 `setter` 方法指定返回类型。](#6-13)
+    - [不要] [使用弃用的 `typedef` 语法。](#6-14)
+    - [推荐] [优先使用内联函数类型，而后是 `typedef`。](#6-15)
+    - [考虑] [在参数上使用函数类型语法。](#6-16)
+    - [避免] [使用 `dynamic` 除非你希望禁用静态检查](#6-17)
+    - [要] [使用 `Future<void>` 作为无法回值异步成员的返回类型。](#6-18)
+    - [避免] [使用 `FutureOr<T>` 作为返回类型。](#6-19)
 - 参数
     - [避免] [避免布尔值类型位置参数](#7-1)
     - [避免] [如果你想省略一些参数请请避免使用位置参数](#7-2)
@@ -97,7 +97,7 @@
     ```
   >目标是尽量利用用户已知的内容。包括他们所熟知的领域、 核心库的习惯用法、 以及你的 API 的其他部分的使用习惯。在这些熟知的基础之上命名你的代码， 可以减少你的用户使用你的库的学习成本， 提高他们的生产效率。
 
-<a name="1-1"></a>
+<a name="1-2"></a>
 - [避免] 避免使用缩写
   >只使用广为人知的缩写，对于特有领域的缩写，请进来不要使用。 如果要使用，请 正确的指定首字母大小写。
 
@@ -114,7 +114,7 @@
     InputOutputStream
     HypertextTransferProtocolRequest
     ```
-<a name="1-1"></a>
+<a name="1-3"></a>
 - [推荐] 将最有意义的描述名词放在最后
   > 最后一个单词应该可以描述所代表的东西。 你可以在之前添加其他前缀来进一步详细描述，例如 其他形容词。
 
@@ -130,7 +130,7 @@
     CanvasRenderingContext2D  // Not a "2D".
     RuleFontFaceCss           // Not a CSS.
     ```
-<a name="1-1"></a>
+<a name="1-4"></a>
 - [考虑] 增加代码可读性，使之语义化
   > 当你不知道如何命名 API 的时候，尝试着用你的 API 写一些代码， 尽量让你写的代码看起来像普通的句子一样。
 
@@ -162,7 +162,7 @@
 
     monsters.producesANewSequenceWhereEach((monster) => monster.hasClaws);
     ```
-<a name="1-1"></a>
+<a name="1-5"></a>
 - [推荐] 非布尔值的属性或者变量命名使用名词短语
   >读者关注属性是什么。如果用户更关心 如何确定一个属性，则很可能应该是一个函数， 并使用动词短语命名该函数。
 
@@ -176,7 +176,7 @@
     list.deleteItems
 
     ```
-<a name="1-1"></a>
+<a name="1-6"></a>
 - [推荐] 布尔值属性或者变量命名使用非命令性动词
   > 布尔名称通常用在控制语句中当做条件，所以你需要让他在 控制条件中语感很好。比较下面的两个：
     ```dart
@@ -202,7 +202,7 @@
     closingWindow // Returns a bool or a window?
     showPopup     // Sounds like it shows the popup.
     ```
-<a name="1-1"></a>
+<a name="1-7"></a>
 - [考虑] 布尔值命名参数请省略动词
   > 提炼于上一条规则。对于命名布尔参数，没有动词的 名称通常看起来更加舒服。
     ```dart
@@ -211,7 +211,7 @@
     var regExp = RegExp(pattern, caseSensitive: false);
     ```
 
-<a name="1-1"></a>
+<a name="1-8"></a>
 - [推荐]布尔值属性或者变量命名时使用正面词汇命名
   > 函数通常返回一个结果给调用者，并且执行一些任务或者带有副作用。 在像 Dart 这种命令式语言中，调用函数通常为了实现其副作用： 可能改变了对象的内部状态、 产生一些输出内容、或者和外部世界沟通等。
 
@@ -222,19 +222,19 @@
     queue.removeFirst();
     window.refresh();
     ```
-<a name="1-1"></a>
+<a name="1-9"></a>
 - [推荐] ？当函数或者方法会产生副作用时用动词短语命名
  
-<a name="1-1"></a>
+<a name="1-10"></a>
 - [推荐] ？当函数或者方法有返回值时用名词短语命名
 
-<a name="1-1"></a>
+<a name="1-11"></a>
 - [考虑] ？如果你想强调函数工作内容请用动词短语命名
 
-<a name="1-1"></a>
+<a name="1-12"></a>
 - [避免] ？避免使用get作为函数方法名字的开头
 
-<a name="1-1"></a>
+<a name="1-13"></a>
 - [推荐] 如果是将一个对象状态复制到另一个对象的方法请使用`to_()`格式命名
   >一个转换函数返回一个新的对象，里面包含一些原对象的状态， 可能还有稍微的修改。 核心库中很多类似的函数命名为 toXXX 。
 
@@ -245,7 +245,7 @@
     stackTrace.toString();
     dateTime.toLocal();
     ```
-<a name="1-1"></a>
+<a name="1-14"></a>
 - [推荐] 改变对象类型使用`as_()`格式命名
   >转换函数提供的是“快照功能”。返回的对象有自己的数据副本，修改原来对象的数据不会改变 返回的对象中的数据。另外一种函数返回的是同一份数据的另外一种 表现形式，返回的是一个新的对象，但是其内部引用的数据和原来对象引用的数据一样。 修改原来对象中的数据，新返回的对象中的数据也一起被修改。
 
@@ -255,7 +255,7 @@
     var list = bytes.asFloat32List();
     var future = subscription.asFuture();
     ```
-<a name="1-1"></a>
+<a name="1-15"></a>
 - [避免] 不要在函数方法名中出现参数名
   >在调用代码的时候可以看到参数，所以无需再次显示参数了。
     ```dart
@@ -273,7 +273,7 @@
     map.containsKey(key);
     map.containsValue(value);
     ```
-<a name="1-1"></a>
+<a name="1-16"></a>
 - [要] ？当给类型参数命名时请遵循如下的助记符约定
 
 ### 库
@@ -287,7 +287,7 @@
 
   >另外，分析工具还可以分析出没有用到的私有成员定义，然后 告诉你可以删除这些无用的代码。 私有成员第三方代码无法调用而你自己在库中也没有使用，所以是无用的代码。
    
-<a name="2-1"></a>
+<a name="2-2"></a>
 - [考虑] 可以在同一个库里声明多个类
   >一些其他语言，比如 Java。将文件结构和类结构进行捆绑&mdash：每个文件仅能定义一个顶级类。 Dart 没有这样的限制。库与类是相互独立的。如果多个类，顶级变量，以及函数，他们再逻辑上归为同一类，那么将他们包含到单一的库中，这样做是非常棒的。
 
@@ -299,25 +299,25 @@
 <a name="3-1"></a>
 - [避免] ？避免为了使用一个简单的函数而去定义一个单一成员的抽象类
 
-<a name="3-1"></a>
+<a name="3-2"></a>
 - [避免] ？定义仅包含静态成员的类。
 
-<a name="3-1"></a>
+<a name="3-3"></a>
 - [避免] ？集成一个不期望被集成的类。
 
-<a name="3-1"></a>
+<a name="3-4"></a>
 - [要] ？把能够继承的说明添加到文档中，如果这个类可以继承。
 
-<a name="3-1"></a>
+<a name="3-5"></a>
 - [避免] ？去实现一个不期望成为接口的类（该类不想作为接口被实现）。
 
-<a name="3-1"></a>
+<a name="3-6"></a>
 - [要] ？对支持接口的类在文档注明
 
-<a name="3-1"></a>
+<a name="3-7"></a>
 - [要] ？对支持 `mixin` 的类在文档注明
 
-<a name="3-1"></a>
+<a name="3-8"></a>
 - [避免] ？去 `mixin` 一个不期望被 `mixin` 的类
 
 ### 构造函数
@@ -328,83 +328,83 @@
 <a name="5-1"></a>
 - [推荐] ？指定字段或顶级变量为 `final`。
 
-<a name="5-1"></a>
+<a name="5-2"></a>
 - [要] ？对概念上是访问的属性使用 `getter` 方法。
 
-<a name="5-1"></a>
+<a name="5-3"></a>
 - [要] ？对概念上是修改的属性使用 `setter` 方法。
 
-<a name="5-1"></a>
+<a name="5-4"></a>
 - [不要] ？在没有对应的 `getter` 的情况下定义 `setter`。
 
-<a name="5-1"></a>
+<a name="5-5"></a>
 - [AVOID] ？using runtime type tests to fake overloading.
 
-<a name="5-1"></a>
+<a name="5-6"></a>
 - [AVOID] ？public late final fields without initializers.
 
-<a name="5-1"></a>
+<a name="5-7"></a>
 - [AVOID] ？returning nullable Future, Stream, and collection types.
 
-<a name="5-1"></a>
+<a name="5-8"></a>
 - [避免] ？为了书写流畅，而从方法中返回 `this` 。
 
 ### 类型
 <a name="6-1"></a>
 - [DO] ？type annotate variables without initializers.
 
-<a name="6-1"></a>
+<a name="6-2"></a>
 - [推荐] ？为类型不明显的公共字段和公共顶级变量指定类型注解。
 
-<a name="6-1"></a>
+<a name="6-3"></a>
 - [避免] ？为初始化的局部变量添加冗余地类型注解。
 
-<a name="6-1"></a>
+<a name="6-4"></a>
 - [DO] ？annotate return types on function declarations.
 
-<a name="6-1"></a>
+<a name="6-5"></a>
 - [DO] ？annotate parameter types on function declarations.
 
-<a name="6-1"></a>
+<a name="6-6"></a>
 - [避免] ？在函数表达式上注解推断的参数类型。
 
-<a name="6-1"></a>
+<a name="6-7"></a>
 - [DON’T] ？type annotate initializing formals.
 
-<a name="6-1"></a>
+<a name="6-8"></a>
 - [DO] ？write type arguments on generic invocations that aren’t inferred.
 
-<a name="6-1"></a>
+<a name="6-9"></a>
 - [DON’T] ？write type arguments on generic invocations that are inferred.
 
-<a name="6-1"></a>
+<a name="6-10"></a>
 - [AVOID] ？writing incomplete generic types.
 
-<a name="6-1"></a>
+<a name="6-11"></a>
 - [推荐] ？使用 `dynamic` 注解替换推断失败的情况。
 
-<a name="6-1"></a>
+<a name="6-12"></a>
 - [推荐] ？使 `function` 类型注解的特征更明显
 
-<a name="6-1"></a>
+<a name="6-13"></a>
 - [不要] ？为 `setter` 方法指定返回类型。
 
-<a name="6-1"></a>
+<a name="6-14"></a>
 - [不要] ？使用弃用的 `typedef` 语法。
 
-<a name="6-1"></a>
+<a name="6-15"></a>
 - [推荐] ？优先使用内联函数类型，而后是 `typedef`。
 
-<a name="6-1"></a>
+<a name="6-16"></a>
 - [考虑] ？在参数上使用函数类型语法。
 
-<a name="6-1"></a>
+<a name="6-17"></a>
 - [避免] ？使用 `dynamic` 除非你希望禁用静态检查
 
-<a name="6-1"></a>
+<a name="6-18"></a>
 - [要] ？使用 `Future<void>` 作为无法回值异步成员的返回类型。
 
-<a name="6-1"></a>
+<a name="6-19"></a>
 - [避免] ？使用 `FutureOr<T>` 作为返回类型。
 
 ### 参数
@@ -436,7 +436,7 @@
     button.isEnabled = false;
     ```
 
-<a name="7-1"></a>
+<a name="7-2"></a>
 - [避免] 如果你想省略一些参数请请避免使用位置参数
   >位置可选参数应该把经常使用的参数放到参数列表前面。 如果位置排列的不合理，则用户使用起来将很 麻烦。 对于拿不准的排序，请使用命名参数。
     ```dart
@@ -460,7 +460,7 @@
           int milliseconds = 0,
           int microseconds = 0});
     ```
-<a name="7-1"></a>
+<a name="7-3"></a>
 - [避免] [避免强制性参数,当参数可以省略时
   >如果用户可以省略一个参数调用函数，推荐让该参数为可选参数而不是强迫用户 使用 null 来作为参数。空字符串 等类似 的情况也适用这种情况。
 
@@ -472,7 +472,7 @@
     // bad
     var rest = string.substring(start, null);
     ```
-<a name="7-1"></a>
+<a name="7-4"></a>
 - [要] 获取范围时将参数设置为左闭右开
   > 如果你定义一个函数或者方法让用户从基于位置排序的集合中 选择一些元素，需要一个开始位置索引和结束位置索引分别制定开始 元素的位置以及结束元素的位置。结束位置通常是指 大于最后一个元素的位置的值。
 
@@ -492,7 +492,7 @@
   >默认的哈希函数实现了恒等式哈希—两个对象 只有当其是同一个对象的时候哈希值才一样。 否则的话，默认的 == 的行为不满足恒等式要求。
   如果你覆写了`==`，则表明你的对象可能和其他对象相等。 任何相等的两个对象都必须具有同样的哈希值。 否则的话，map 和其他基于哈希的集合将不知道这两个对象是相等的。
 
-<a name="8-1"></a>
+<a name="8-2"></a>
 - [要] 请让你的`==`运算符遵守数学上的相等
   >等价关系应该是这样的：
 
@@ -501,12 +501,12 @@
     - 传递: 如果 `a == b` 和 `b == c` 都返回 true，则 a == c 也应该为 true。
   >用户以及使用 == 的代码都期望遵守上面的规则。 如果你的类无法满足这些要求，则 == 就不是你想 表达的函数的正确名字。
 
-<a name="8-1"></a>
+<a name="8-3"></a>
 - [避免] 避免为可变类定义常规意义上的相等
   >如果你定义了 == ，则你还应该定义 hashCode 函数。 这两个函数都应该考虑对象的变量。如果这些变量发生了变化，则 表明该对象的哈希值也应该变化。
   大部分基于哈希的集合并不这样认为—这些集合 认为对象的哈希值应该一直不变，如果不是这样的话，这些集合 可能出现怪异的行为。
 
-<a name="8-1"></a>
+<a name="8-4"></a>
 - [不要] 不需要在重载`==`运算符时判断类型是否为`null`
   > 语言规范表明了这种判断已经自动执行了，你的 == 自定义操作符只有当 右侧对象不为 null 的时候才会执行。
     ```dart
