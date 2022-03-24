@@ -122,7 +122,7 @@
     - [避免] [避免过度使用Markdown](documentation.md#3-1)
     - [避免] [避免使用HTML作为注释](documentation.md#3-2)
     - [推荐] [使用反引号来区分代码块](documentation.md#3-3)
-- 书写
+- 如何写注释
     - [推荐] [尽量简短](documentation.md#4-1)
     - [避免] [尽量避免使用缩略词除非它们很常见](documentation.md#4-2)
     - [推荐] [使用`this`而不是`the`去指代实例本身](documentation.md#4-3)
