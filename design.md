@@ -38,6 +38,8 @@
     - [要] [为可获得的属性添加`getters`](#4-2)
     - [要] [为可设置的属性添加`setters`](#4-3)
     - [不要] [不要定义`setters`时不定义对应的`getters`](#4-4)
+    - [AVOID] using runtime type tests to fake overloading.
+    - [AVOID] public late final fields without initializers.
     - [避免] [避免返回值返回`null`](#4-5)
     - [避免] [避免直接返回`this`,链式调用请用cascade也就是`..`运算符](#4-6)
 - 类型
